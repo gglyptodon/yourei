@@ -78,22 +78,29 @@ Remove words in bulk:
 yourei --remove-words remove.txt
 ```
 
-Keys (highlights):
+Key bindings (Yourei):
 
 - `0-5` grade current card
+- `g` (re)generate from LLM
+- `u` populate translations
+- `n` skip
+- `b` back
+- `x` suspend
 - `a` add word
+- `A` add word (reverse)
+- `d` delete
+- `t` filter by tag
+- `l` add tag
+- `r` remove tag
 - `s` search deck
 - `c` switch deck
-- `t` filter by tag
-- `l` add tag to current card
-- `r` remove tag from current card
-- `g` regenerate LLM
-- `y` toggle due-today-only
+- `m` switch model
+- `v` toggle review mode
+- `space` reveal translation (in review mode)
 - `p` save config to TOML
-- `n` skip
-- `x` suspend
-- `d` delete
+- `y` toggle due-today-only
 - `q` quit
+- `Esc` close dialogs
 
 <img width="1373" height="758" alt="yourei_example" src="https://github.com/user-attachments/assets/8bd71232-f0cf-437e-9779-5aff89df5a88" />
 
@@ -116,3 +123,11 @@ yourei-lite --source English --target French \
 ```
 
 Add words directly in the TUI with the `a` hotkey. Words added in the TUI are not persisted.
+
+Key bindings (Yourei-lite):
+
+- `q` quit
+- `n` next word
+- `b` previous word
+- `g` regenerate
+- `a` add word
