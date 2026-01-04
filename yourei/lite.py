@@ -281,8 +281,8 @@ Screen {
 
     BINDINGS = [
         Binding("q", "quit", "Quit"),
-        Binding("n, right", "next_word", "Next"),
-        Binding("p, left", "prev_word", "Prev"),
+        Binding("n", "next_word", "Next"),
+        Binding("b", "prev_word", "Prev"),
         Binding("g", "regen", "Regenerate"),
         Binding("a", "add_word", "Add"),
     ]
@@ -340,7 +340,7 @@ Screen {
             f"Ollama: {self.ollama_url}\n"
             f"Words: {len(self.words)}\n\n"
             f"{status}\n\n"
-            f"[dim]a add • n/→ next • p/← prev • g regenerate • q quit[/dim]"
+            f"[dim]a add • n next • b prev • g regenerate • q quit[/dim]"
         )
 
     def _set_right_panel_text(self, text: str) -> None:
