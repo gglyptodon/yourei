@@ -1,0 +1,18 @@
+[project.scripts]
+yourei = "yourei.app:main"
+yourei-lite = "yourei.lite:main"
+yourei-export-translations = "yourei.export_translations:main"
+
+[project]
+name = "yourei"
+version = "0.1.0"
+description = "TUI vocab trainer / word bank using local LLMs (via ollama) "
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "gglyptodon", email = "gglyptodon@gmail.com" }]
+requires-python = ">=3.10"
+dependencies = [
+    "httpx",
+    "textual",
+    "tomli; python_version < '3.11'",
+]
