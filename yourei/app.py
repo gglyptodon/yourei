@@ -1821,19 +1821,19 @@ class Yourei(App):
         Binding("4", "grade(4)", "Good"),
         Binding("5", "grade(5)", "Easy"),
         Binding("g", "regen_llm", "(Re)generate"),
-        Binding("u", "populate_translations", "Populate", show=False),
+        Binding("u", "populate_translations", "Populate…", show=False),
         Binding("n", "skip", "Skip"),
         Binding("b", "prev", "Back"),
         Binding("x", "suspend", "Suspend"),
-        Binding("a", "add_word", "Add"),
-        Binding("A", "add_word_reverse", "Add reverse"),
+        Binding("a", "add_word", "Add…"),
+        Binding("A", "add_word_reverse", "Add reverse…"),
         Binding("d", "delete_card", "Delete"),
-        Binding("t", "filter_tag", "Filter", show=False),
-        Binding("l", "add_tag", "Tag", show=False),
-        Binding("r", "remove_tag", "Untag", show=False),
+        Binding("t", "filter_tag", "Filter…", show=False),
+        Binding("l", "add_tag", "Tag…", show=False),
+        Binding("r", "remove_tag", "Untag…", show=False),
         Binding("s", "search_deck", "Search", show=False),
-        Binding("c", "switch_deck", "Switch", show=False),
-        Binding("m", "switch_model", "Model"),
+        Binding("c", "switch_deck", "Switch…", show=False),
+        Binding("m", "switch_model", "Model…"),
         Binding("v", "toggle_review_mode", "Review mode"),
         Binding("space", "reveal_translation", "Reveal", show=False),
         Binding("p", "save_config", "Save config", show=False),
@@ -1847,17 +1847,17 @@ class Yourei(App):
                 continue
             yield cmd
         yield SystemCommand(
-            "Switch Deck", "Switch source/target deck", self.action_switch_deck
+            "Switch Deck… ", "Switch source/target deck", self.action_switch_deck
         )
         yield SystemCommand(
-            "Search Deck", "Search within a deck", self.action_search_deck
+            "Search Deck… ", "Search within a deck", self.action_search_deck
         )
         yield SystemCommand(
             "Save Config", "Save current settings to config", self.action_save_config
         )
-        yield SystemCommand("Filter", "Filter deck by tag", self.action_filter_tag)
+        yield SystemCommand("Filter… ", "Filter deck by tag", self.action_filter_tag)
         yield SystemCommand(
-            "Populate Translations",
+            "Populate Translations… ",
             "Update or populate translations with current LLM",
             self.action_populate_translations,
         )
@@ -2041,8 +2041,8 @@ class Yourei(App):
             f"Filter: {filter_info} • Due: {due_info} • Review: {review_info}\n"
             f"Card: due={due} reps={reps} interval={itv}d ease={ef:.2f} lapses={lap}\n"
             f"Tags: {tag_info}\n"
-            f"\nKeys: • 0-5 grade • g regenerate from LLM • n skip • x suspend • a add • d delete "
-            f"• u populate translations • b back • l tag • r untag • m change model • v toggle review mode • space reveal • toggle due today  • s search deck • c switch deck • t filter deck "
+            f"\nKeys: • 0-5 grade • g regenerate from LLM • n skip • x suspend • a add… • A add reverse… • d delete "
+            f"• u populate translations… • b back • l tag… • r untag… • m change model… • v toggle review mode • space reveal • toggle due today  • s search deck… • c switch deck… • t filter deck… "
             f"• p save config • q quit"
             f"\n\nStatus: {status}\n"
         )

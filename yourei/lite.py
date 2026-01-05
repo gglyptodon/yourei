@@ -284,7 +284,7 @@ Screen {
         Binding("n", "next_word", "Next"),
         Binding("b", "prev_word", "Prev"),
         Binding("g", "regen", "Regenerate"),
-        Binding("a", "add_word", "Add"),
+        Binding("a", "add_word", "Add…"),
     ]
 
     def __init__(
@@ -340,7 +340,7 @@ Screen {
             f"Ollama: {self.ollama_url}\n"
             f"Words: {len(self.words)}\n\n"
             f"{status}\n\n"
-            f"[dim]a add • n next • b prev • g regenerate • q quit[/dim]"
+            f"[dim]• a add… • n next • b prev • g regenerate • q quit[/dim]"
         )
 
     def _set_right_panel_text(self, text: str) -> None:
