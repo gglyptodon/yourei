@@ -1847,17 +1847,17 @@ class Yourei(App):
                 continue
             yield cmd
         yield SystemCommand(
-            "Switch Deck", "Switch source/target deck", self.action_switch_deck
+            "Switch Deck… ", "Switch source/target deck", self.action_switch_deck
         )
         yield SystemCommand(
-            "Search Deck", "Search within a deck", self.action_search_deck
+            "Search Deck… ", "Search within a deck", self.action_search_deck
         )
         yield SystemCommand(
             "Save Config", "Save current settings to config", self.action_save_config
         )
-        yield SystemCommand("Filter", "Filter deck by tag", self.action_filter_tag)
+        yield SystemCommand("Filter… ", "Filter deck by tag", self.action_filter_tag)
         yield SystemCommand(
-            "Populate Translations",
+            "Populate Translations… ",
             "Update or populate translations with current LLM",
             self.action_populate_translations,
         )
