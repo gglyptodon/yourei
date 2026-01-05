@@ -2556,6 +2556,7 @@ def main() -> None:
         config_path=config_path,
         db_path=db_path,
     )
+
     app.run()
 
 
